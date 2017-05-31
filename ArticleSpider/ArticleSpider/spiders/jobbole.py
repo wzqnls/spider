@@ -5,6 +5,7 @@ from scrapy.http import Request
 from urllib import parse
 
 from ArticleSpider.items import JobBoleArticleItem
+from ArticleSpider.utils import get_md5
 
 
 class JobboleSpider(scrapy.Spider):
@@ -58,10 +59,11 @@ class JobboleSpider(scrapy.Spider):
         # 文章封面图
         front_image_url = response.meta.get('front_image_url', "")
 
+        article_item['url_object_id'] = get_md5(response.url)
         article_item['title'] = title
         article_item['url'] = response.url
         article_item['create_date'] = create_date
-        article_item['front_image_url'] = front_image_url
+        article_item['front_image_url'] = [front_image_url]
         article_item['praise_nums'] = praise_nums
         article_item['comment_nums'] = comment_nums
         article_item['fav_nums'] = fav_nums
