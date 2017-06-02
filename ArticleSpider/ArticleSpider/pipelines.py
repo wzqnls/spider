@@ -23,7 +23,7 @@ class MysqlPipeline(object):
         self.conn = MySQLdb.connect(
                     host='localhost',
                     user='root',
-                    password='6666',
+                    password='666',
                     db='article_spider',
                     charset='utf8',
                     use_unicode=True)
