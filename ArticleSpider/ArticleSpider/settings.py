@@ -101,4 +101,4 @@ IMAGES_STORE = os.path.join(project_dir, "images")
 MYSQL_HOST = "localhost"
 MYSQL_DB = "article_spider"
 MYSQL_USER = "root"
-MYSQL_PASSWORD = "6666"
+MYSQL_PASSWORD = "666"
