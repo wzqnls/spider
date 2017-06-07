@@ -105,7 +105,7 @@ def is_login():
         return True
 
 
-# zhihu_login("wzqnls@gamil.com", "codewithpython666")
+# zhihu_login("xxx", "xxx")
 # get_index()
 # is_login()
 get_captcha()
