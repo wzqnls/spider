@@ -129,14 +129,14 @@ except:
    input = input
 
 if __name__ == '__main__':
-   if isLogin():
+    if isLogin():
        print('您已经登录')
-   else:
-       account = input('请输入你的用户名\n>  ')
-       secret = input("请输入你的密码\n>  ")
+    else:
+        account = input('请输入你的用户名\n>  ')
+        secret = input("请输入你的密码\n>  ")
 
-login(secret, account)
-response = session.get("https://www.zhihu.com/", headers=headers)
-with open('second_page.html', 'wb') as f:
-   f.write(response.text.encode("utf-8"))
-print('done')
+    login(secret, account)
+    response = session.get("https://www.zhihu.com/", headers=headers)
+    with open('second_page.html', 'wb') as f:
+       f.write(response.text.encode("utf-8"))
+    print('done')

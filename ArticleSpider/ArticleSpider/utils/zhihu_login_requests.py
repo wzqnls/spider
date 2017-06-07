@@ -14,7 +14,6 @@ except:
 import re
 
 
-
 session = requests.session()
 session.cookies = cookielib.LWPCookieJar(filename='cookies.txt')
 
@@ -27,7 +26,8 @@ agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) 
 header = {
     "HOST": "www.zhihu.com",
     "Referer": "https://www.zhihu.com",
-    "User-Agent": agent
+    "User-Agent": agent,
+    "Cookie": '_zap=642b08d3-8a8e-4315-9106-4d50575a83f0; d_c0="ADCCQ9n8jguPTl8hT8C09d5jr0zYn01qIf4=|1491354302"; _xsrf=8f4b634af92924d53105835f6642d7ae; q_c1=c58346dd707c4204a550d5be3816a131|1496384287000|1490859537000; q_c1=c58346dd707c4204a550d5be3816a131|1496384287000|1490859537000; r_cap_id="YTRmZjc4YjVkNjg5NDJiZGI2YTI4MDgyZTU3NDhhMDQ=|1496751809|063ac05236a1140b31db22a91211e990f059ff2b"; cap_id="YjMxNGNmNjFiYTE5NGFhY2E1M2M5OGI3MTlmOWRmY2I=|1496751809|1722375a042de0d5d888b762424292f86e03729b"; __utma=51854390.315060952.1496629119.1496751864.1496800847.10; __utmb=51854390.0.10.1496800847; __utmc=51854390; __utmz=51854390.1496751864.9.6.utmcsr=zhihu.com|utmccn=(referral)|utmcmd=referral|utmcct=/; __utmv=51854390.100-1|2=registration_date=20140502=1^3=entry_date=20140502=1; z_c0=Mi4wQUFDQWFjQXRBQUFBTUlKRDJmeU9DeGNBQUFCaEFsVk45Q3RlV1FCcEI3eWl2ejRPZlV2c2o5M1M1TkFWbThRSzNn|1496800849|1b491da84674cdc53b42f94eaa34a430a2f2aacc'
 }
 
 
@@ -105,7 +105,14 @@ def is_login():
         return True
 
 
-# zhihu_login("wzqnls@gamil.com", "codewithpython666")
+def test_login():
+    post_url = "https://www.zhihu.com"
+    response = session.get(post_url, headers=header)
+    pass
+
+
+# zhihu_login("xxx", "xxx")
 # get_index()
 # is_login()
-get_captcha()
+# get_captcha()
+test_login()
