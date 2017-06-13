@@ -132,8 +132,8 @@ class ZhihuSpider(scrapy.Spider):
         if xsrf:
             post_data = {
                 "_xsrf": xsrf,
-                "phone_num": '13735846612',
-                "password": 'codewithpython666',
+                "phone_num": 'xxx',
+                "password": 'xxx',
                 "captcha": ""
             }
 
