@@ -46,9 +46,9 @@ ROBOTSTXT_OBEY = False
 
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
-#SPIDER_MIDDLEWARES = {
-#    'ArticleSpider.middlewares.ArticlespiderSpiderMiddleware': 543,
-#}
+SPIDER_MIDDLEWARES = {
+   'ArticleSpider.middlewares.RandomUserAgentMiddleware': 543,
+}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
@@ -68,7 +68,7 @@ ITEM_PIPELINES = {
     # 'ArticleSpider.pipelines.JsonExporterPipeline': 2,
     # # 'scrapy.pipelines.images.ImagesPipeline': 1,
     # 'ArticleSpider.pipelines.ArticleImagePipeline': 1,
-    'ArticleSpider.pipelines.MysqlTwistedPipeline': 1,
+    'ArticleSpider.pipelines.MysqlTwistedPipeline': 2,
 }
 
 IMAGES_URLS_FIELD = "front_image_url"
@@ -111,3 +111,6 @@ MYSQL_PASSWORD = "666"
 
 SQL_DATETIME_FORMAT = "%Y-%m-%d %H:%M:%S"
 SQL_DATE_FORMAT = "%Y-%m-%d"
+
+
+RANDOM_UA_TYPE = "random"
