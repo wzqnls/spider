@@ -46,15 +46,17 @@ ROBOTSTXT_OBEY = False
 
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
-SPIDER_MIDDLEWARES = {
-   'ArticleSpider.middlewares.RandomUserAgentMiddleware': 543,
-}
+# SPIDER_MIDDLEWARES = {
+#     'ArticleSpider.middlewares.RandomUserAgentMiddleware': 543,
+#     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+# }
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'ArticleSpider.middlewares.MyCustomDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+    'ArticleSpider.middlewares.RandomUserAgentMiddleware': 543,
+    'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+}
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
@@ -114,3 +116,7 @@ SQL_DATE_FORMAT = "%Y-%m-%d"
 
 
 RANDOM_UA_TYPE = "random"
+
+USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36"
+
+user_agent_list = []
