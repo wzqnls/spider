@@ -25,6 +25,10 @@ class ZhihuSpider(scrapy.Spider):
         "User-Agent": agent
     }
 
+    custom_settings = {
+        "COOKIES_ENABLED": True,
+    }
+
     # 使用登录cookie信息
     session = requests.session()
 
