@@ -8,8 +8,8 @@ import requests
 from scrapy.selector import Selector
 import  MySQLdb
 
-conn = MySQLdb.connect(host="localhost", user="root", passwd="666", db="article_apider", charset="utf8")
-cursor = conn.cursor()
+# conn = MySQLdb.connect(host="localhost", user="root", passwd="666", db="article_apider", charset="utf8")
+# cursor = conn.cursor()
 
 
 def crawl_ips():

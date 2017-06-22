@@ -54,7 +54,8 @@ COOKIES_ENABLED = False
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-    'ArticleSpider.middlewares.RandomUserAgentMiddleware': 543,
+    'ArticleSpider.middlewares.JSPageMiddleware': 1,
+    # 'ArticleSpider.middlewares.RandomUserAgentMiddleware': 543,
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
 }
 
@@ -106,9 +107,9 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'ArticleSpider'))
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 MYSQL_HOST = "localhost"
-MYSQL_DB = "article_apider"
+MYSQL_DB = "article_spider"
 MYSQL_USER = "root"
-MYSQL_PASSWORD = "666"
+MYSQL_PASSWORD = "6666"
 
 
 SQL_DATETIME_FORMAT = "%Y-%m-%d %H:%M:%S"
