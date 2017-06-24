@@ -103,3 +103,11 @@ class JSPageMiddleware(object):
             print("访问{0}".format(request.url))
 
             return HtmlResponse(url=spider.browser.current_url, body=spider.browser.page_source, encoding='utf8')
+
+# chrome 无界面运行示例
+# from pyvirtualdisplay import Display
+# display = Display(visible=0, size=(800, 600))
+# display.start()
+#
+# browser = webdriver.Chrome()
+# browser.get()
