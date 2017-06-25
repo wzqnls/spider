@@ -19,15 +19,15 @@ class JobboleSpider(scrapy.Spider):
     start_urls = ['http://blog.jobbole.com/all-posts/']
     # start_urls = ['http://101.200.160.112:8088']
 
-    def __init__(self):
-        self.browser = webdriver.Chrome(executable_path="D:/chromedriver.exe")
-        super(JobboleSpider, self).__init__()
-        dispatcher.connect(self.spider_closed, signals.spider_closed)
-
-    def spider_closed(self, spider):
-        # 当爬虫退出的时候关闭爬虫
-        print("spider closed")
-        self.browser.quit()
+    # def __init__(self):
+    #     self.browser = webdriver.Chrome(executable_path="D:/chromedriver.exe")
+    #     super(JobboleSpider, self).__init__()
+    #     dispatcher.connect(self.spider_closed, signals.spider_closed)
+    #
+    # def spider_closed(self, spider):
+    #     # 当爬虫退出的时候关闭爬虫
+    #     print("spider closed")
+    #     self.browser.quit()
 
 
     def parse(self, response):
